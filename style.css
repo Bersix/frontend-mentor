@@ -1,0 +1,49 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+
+  --Slate-300: hsl(212, 45%, 89%);
+  --Slate-500: hsl(216, 15%, 48%);
+  --Slate-900: hsl(218, 44%, 22%);
+
+  --font-main: "Outfit", sans-serif;
+  --paragraph-size: 15px;
+  --font-heading-weight: 700;
+  --font-paragraph-weight: 400;
+}
+
+.body,
+.html {
+  font-family: var(--font-main);
+  background-color: var(--White);
+  color: var(--Slate-900);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--White);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
