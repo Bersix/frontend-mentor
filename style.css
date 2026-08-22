@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/Outfit/Outfit-VariableFont_wght.ttf") format("ttf");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --White: hsl(0, 0%, 100%);
 
@@ -11,8 +19,8 @@
   --font-paragraph-weight: 400;
 }
 
-.body,
-.html {
+body,
+html {
   font-family: var(--font-main);
   background-color: var(--White);
   color: var(--Slate-900);
@@ -25,6 +33,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .card {
@@ -34,8 +44,9 @@
   overflow: hidden;
   max-width: 350px;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   transition: transform 0.3s ease-in-out;
+  padding-bottom: 40px;
 }
 
 .card:hover {
@@ -45,5 +56,39 @@
 .card img {
   width: 100%;
   border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  font-size: 24px;
+  font-weight: var(--font-heading-weight);
+  margin-bottom: 10px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card p {
+  font-size: var(--paragraph-size);
+  font-weight: var(--font-paragraph-weight);
+  color: var(--Slate-500);
   margin-bottom: 20px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    margin-bottom: 15px;
+  }
 }
